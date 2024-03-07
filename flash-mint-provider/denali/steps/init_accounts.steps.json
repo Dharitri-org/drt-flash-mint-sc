@@ -1,0 +1,59 @@
+{
+    "name": "init accounts",
+    "steps": [
+        {
+            "step": "setState",
+            "accounts": {
+                "address:owner": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "dct": {
+                        "str:MEX-abcdef": {
+                            "roles": [
+                                "DCTRoleLocalMint",
+                                "DCTRoleLocalBurn"
+                            ]
+                        }
+                    },
+                    "storage": {}
+                },
+                "address:user": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "storage": {}
+                },
+                "address:user_with_mex": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "dct": {
+                        "str:MEX-abcdef": "1,000,000,000,000"
+                    },
+                    "storage": {}
+                }
+            }
+        },
+        {
+            "step": "checkState",
+            "accounts": {
+                "address:owner": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "storage": {}
+                },
+                "address:user": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "storage": {}
+                },
+                "address:user_with_mex": {
+                    "nonce": "0",
+                    "balance": "1,000,000,000,000",
+                    "dct": {
+                        "str:MEX-abcdef": "1,000,000,000,000"
+                    },
+                    "storage": {}
+                }
+            }
+        }
+    ]
+}

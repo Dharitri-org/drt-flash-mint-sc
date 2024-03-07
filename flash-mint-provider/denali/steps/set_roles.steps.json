@@ -1,0 +1,24 @@
+{
+    "name": "set roles",
+    "steps": [
+        {
+            "step": "setState",
+            "accounts": {
+                "sc:flash-mint-provider": {
+                    "nonce": "0",
+                    "dct": {
+                        "str:MEX-abcdef": {
+                            "roles": [
+                                "DCTRoleLocalMint",
+                                "DCTRoleLocalBurn"
+                            ]
+                        }
+                    },
+                    "storage": {},
+                    "owner": "address:owner",
+                    "code": "file:../../output/flash-mint-provider.wasm"
+                }
+            }
+        }
+    ]
+}
